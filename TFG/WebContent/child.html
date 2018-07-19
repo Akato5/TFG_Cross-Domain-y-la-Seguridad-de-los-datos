@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/estilos.css">
+<title>fondo escritorio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src='js/html2html.js'></script>
+<script src='js/util.js'></script>
+</head>
+<body>
+	<script>document.write("<h2> Mi Origen es :"+document.location.origin+"</h2>");</script>
+	<br>
+	<div>
+				<span>
+				  Datos para mi callBack (JSON): 
+				</span>  
+				<input type="text" name="datos_entrada" id="datos_entrada"><br>				  
+				
+				<div class="bordes">
+					<p>
+						<b>Recibir Datos mediante PostMessage:</b>
+					</p> 
+					<div class="btn-group">
+					 <button id="boton" class="btn" onclick="recibirDatos(window.opener); ">(window.opener)</button>					 
+					 <button id="boton2" class="btn" onclick="recibirDatos(parent);">(parent)</button>
+					 <button id="boton3" class="btn" onclick="recibirDatos('Index.html');">(ServiceWorker)</button>
+					</div>
+				</div>
+				<div class="bordes">
+					<p>
+					  <b>Recibir Datos mediante acceso directo a la función:</b> 
+					</p>
+					<div class="btn-group">
+					 <button id="boton4" class="btn" onclick="ejecutarFuncion(window.opener); ">(window.opener)</button>
+					 <button id="boton6" class="btn" onclick="ejecutarFuncion(parent);">(parent)</button>
+					</div>
+				</div>
+	</div>
+</body>
+</html>

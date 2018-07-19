@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- esapi4js dependencies -->
+<script src="esapi4js/lib/log4js.js"></script>
+<!-- esapi4js i18n resources -->
+<script src="esapi4js/resources/i18n/ESAPI_Standard_es_ES.properties.js"></script>
+<!-- esapi4js core -->
+<script src="esapi4js/esapi.js"></script>
+
+<!-- esapi4js configuration -->
+<script src="esapi4js/resources/Base.esapi.properties.js"></script>
+<script src='js/util.js'></script>
+<link rel="stylesheet" type="text/css" href="styles/estilos.css">
+<title>Tipos de comunicación y seguridad</title>
+</head>
+<body>
+
+<form>
+	<h2><script>init();origen();</script></h2>			
+	<div class="tab">
+	  <button class="tablinks" onclick="openTab(event, 'WebSockets');return false;">WebSockets</button>
+	  <button class="tablinks" onclick="openTab(event, 'PostMessage');return false;">PostMessage/Service Worker</button>
+	  <button class="tablinks" onclick="openTab(event, 'Ajax');return false;">Ajax</button>
+	</div>
+	
+	<div id="WebSockets" class="tabcontent">	
+		<br>
+			<td><h1>WEBSOCKETS</h1>
+			    <div class="btn-group1">
+				    <input id="message" type="text" size="50">
+				    <input onclick="client2server.wsEnviaMensaje();" class="btn" value="Enviar" type="button">
+				    <input onclick="client2server.wsDesconecta();" class="btn" value="Desconectar" type="button">
+			    </div>
+					<textarea id="area" rows="15" cols="100"></textarea>
+		    </td>
+		
+	</div>
+	<div id="PostMessage" class="tabcontent">
+		<br>
+		    <td><h1>PostMessage y ServiceWorker</h1>
+			    <span>
+			    	Escriba aquí la URL que quiere invocar:
+			    </span>
+			    <br>
+			    <div>
+		    		<input id="url" type="text" value="http://localhost:8090/TFG/child.html" size="50">
+		    		<br>
+		    		<div class="btn-group">
+					    <input onclick="openModal();" value="Iframe" type="button" class="btn">
+					    <input onclick="openInNewTab(false);" value="window.open" type="button" class="btn">
+					    <input onclick="openInNewTab(true);" value="ServiceWorker" type="button" class="btn">
+				    </div>
+			    </div>
+		    </td>
+	</div>
+	<div id="Ajax" class="tabcontent">
+		<br>
+		    <td><h1>PETICIONES AJAX</h1>
+			    <span>
+			    	Escriba aquí la URL que quiere invocar:
+			    </span>
+			    <br>
+	    		<input id="urlAjax" type="text" value="http://localhost:8080/TFG/ajax" size="50">
+	    		<br>
+			    <span>
+			    	Indique los parámetros(JSON) para el envío: (Ej: {"clave":"valor","clave2":"valor2"})
+			    </span>
+			    <br>
+	    		<input id="parametros" type="text" size="50"> 
+	    		<br>
+	    		<div class="btn-group">  		
+			    	<input onclick="callServer();" value="Petición AJAX" type="button" class="btn">
+			    </div> 
+		    </td> 
+	</div> 	       
+</form>
+<script src='js/html2html.js'></script>
+<script src="js/client2server.js"></script>
+<script src="js/iframeDialog.js"></script>
+</body>
+</html>

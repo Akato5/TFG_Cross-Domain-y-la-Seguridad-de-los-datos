@@ -1,0 +1,161 @@
+	body {
+	    background-color: #fefbd8;
+	    font-family: "Comic Sans MS", cursive, sans-serif;
+	    text-align: center;
+	    overflow-y:hidden;
+	}
+	
+	h1 {
+		color: #6495ED;
+	}
+	
+	span {
+		color: #6495ED;	
+	}
+	
+	h2 {
+		margin: 0 auto;
+	    margin-bottom: 0;
+	}
+	/* Style the tab */
+	.tab {
+	    overflow: hidden;
+	    border: 1px solid #80ced6;
+	    background-color: #d5f4e6;
+	    display: flex;
+	    width: 55%;
+	    margin: 0 auto;
+	    margin-bottom: 0;
+	    text-align: center;
+	}
+	
+	/* Style the buttons inside the tab */
+	.tab button {
+	    background-color: inherit;
+	    float: left;
+	    border: none;
+	    outline: none;
+	    cursor: pointer;
+	    padding: 14px 16px;
+	    transition: 0.3s;
+	    font-size: 17px;
+	    flex: 1 1 auto;
+	    justify-content: space-around;
+	    font-family: "Comic Sans MS", cursive, sans-serif;
+	    color:white;
+	}
+	
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+	    text-decoration-line: underline;
+	}
+	
+	/* Create an active/current tablink class */
+	.tab button.active {
+	    background-color: #80ced6;
+	}
+	
+	/* Style the tab content */
+	.tabcontent {
+	    display: none;
+	    padding: 6px 12px;
+	    -webkit-animation: fadeEffect 1s;
+	    animation: fadeEffect 1s;
+	    margin-left: 3.5%;
+	    border: 1px solid #80ced6;
+	    width: 70%;
+	    height: 25em;
+	    margin: 0 auto;
+	}
+	
+	/* Fade in tabs */
+	@-webkit-keyframes fadeEffect {
+	    from {opacity: 0;}
+	    to {opacity: 1;}
+	}
+	
+	@keyframes fadeEffect {
+	    from {opacity: 0;}
+	    to {opacity: 1;}
+	}
+	
+	div.sameOrigin {	    
+	    margin: 3,5%;
+	    margin-bottom: 0;
+	    width: 10px;
+	    height: 25px;
+	    background: #6495ED;
+	    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+	    transition: width 2s;
+	}
+	
+	div.crossDomain {
+	    width: 400px;
+	}
+
+	.btn {
+	  background: #80ced6;
+	  background-image: -webkit-linear-gradient(top, #80ced6, #2980b9);
+	  background-image: -moz-linear-gradient(top, #80ced6, #2980b9);
+	  background-image: -ms-linear-gradient(top, #80ced6, #2980b9);
+	  background-image: -o-linear-gradient(top, #80ced6, #2980b9);
+	  background-image: linear-gradient(to bottom, #80ced6, #2980b9);
+	  -webkit-border-radius: 28;
+	  -moz-border-radius: 28;
+	  border-radius: 28px;
+	  color: #ffffff;
+	  font-size: 16px;
+	  padding: 8px 18px 8px 18px;
+	  text-decoration: none;
+	  /*width: 140px;*/
+	}
+
+	.btn:hover {
+	  background: #3cb0fd;
+	  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	  text-decoration: none;
+	}
+	.btn-group{	    
+	     margin: 0 auto;
+	    margin-top: 3.5%;
+	    margin-bottom: 3.5%;
+	    text-align: center;
+	}
+	.btn-group1{	    
+	     margin: 0 auto;
+	    text-align: center;
+	}	
+	
+	textarea {
+		margin-top: 1%;
+	}
+	
+	#dialogClose {
+		position: absolute; 
+		top: 0; 
+		right: 4px; 
+		font-size: 20px; 
+		color: #000; 
+		text-decoration: none; 
+		outline: none;
+	}
+	
+	#dialog-body {
+		border: 0; 
+		width: 100%; 
+		height: 100%;
+	}
+	
+	div.bordes {
+		margin: auto;
+		padding: 12px;
+		width: 70%;
+		border-style: solid;
+		margin-top: 3.5%;
+		margin-bottom: 3.5%;
+		border-color: #80ced6;
+	}
